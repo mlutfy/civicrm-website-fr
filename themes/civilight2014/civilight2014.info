@@ -24,10 +24,10 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.css
-
 stylesheets[all][] = dist/css/bootstrap.min.css
 stylesheets[all][] = dist/css/bootstrap-theme.min.css
+
+stylesheets[all][] = css/style.css
 
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:
