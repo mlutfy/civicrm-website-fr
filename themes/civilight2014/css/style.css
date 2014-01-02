@@ -1,4 +1,142 @@
+
 /**
- * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
- * remove this comment and start adding your styles to this file.
+ * Main menu
  */
+.navbar-default .navbar-nav {
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus {
+  background: inherit;
+  color: #A55F53;
+  text-transform: uppercase;
+  border-right: 1px solid #B86E7A;
+  box-shadow: inherit;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.navbar-default .navbar-nav li.last a,
+.navbar-default .navbar-nav li.active.last a {
+  border-right: 0px;
+}
+
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus {
+  text-decoration: underline;
+}
+
+/**
+ * Front page. General stuff.
+ */
+/* hide the title of the node */
+body.front h1.page-header {
+  display: none;
+}
+
+body.front .region-content {
+  padding-top: 2em;
+}
+
+/**
+ * Front page buttons
+ * NB: mobile first.
+ */
+.civilight2014-front-main-actions.navbar-nav {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.civilight2014-front-main-actions li {
+  padding-top: 3em;
+}
+
+.civilight2014-front-main-actions li a {
+  width: 300px;
+  height: 200px;
+  line-height: 400px;
+  text-align: center;
+}
+
+.civilight2014-front-main-actions li a:hover,
+.civilight2014-front-main-actions li a:focus {
+  text-decoration: underline;
+}
+
+.civilight2014-front-main-actions li.civilight2014-front-main-actions-discover a {
+  background: url('../images/front-main-actions-discover.jpg');
+}
+
+.civilight2014-front-main-actions li.civilight2014-front-main-actions-help a {
+  background: url('../images/front-main-actions-help.jpg');
+}
+
+.civilight2014-front-main-actions li.civilight2014-front-main-actions-community a {
+  background: url('../images/front-main-actions-community.jpg');
+}
+
+@media (min-width: 768px) {
+  /* display horizontally */
+  .civilight2014-front-main-actions.navbar-nav {
+    width: 100%;
+  }
+
+  .civilight2014-front-main-actions-wrapper {
+    width: 975px;
+    margin: 0 auto;
+  }
+
+  .civilight2014-front-main-actions li {
+    margin-right: 25px;
+    padding-top: 0;
+  }
+}
+
+/**
+ * Footer
+ */
+.region-content {
+  padding-bottom: 100px;
+}
+
+body > footer {
+  background: #056186;
+  color: #fff;
+}
+
+body > footer .container {
+  padding-top: 2em;
+}
+
+.civilight2014-footer-civicrm-civiorg {
+  padding-bottom: 2em;
+}
+
+.civilight2014-footer-civicrm-civiorg a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  background: url('../images/bottom-logo.png') no-repeat;
+  padding-left: 150px;
+}
+
+.civilight2014-footer-civicrm-civiorg a {
+  color: #fff;
+}
+
+.civilight2014-footer-civicrm-civiorg a:hover,
+.civilight2014-footer-civicrm-civiorg a:focus {
+  text-decoration: underline;
+}
+
+.civilight2014-footer-license-icon {
+  float: left;
+  padding-right: 1em;
+}
