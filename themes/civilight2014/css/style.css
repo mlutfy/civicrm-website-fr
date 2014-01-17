@@ -56,30 +56,45 @@ body.front .region-content {
 
 .civilight2014-front-main-actions li {
   padding-top: 3em;
+  background-color: #eee;
+}
+.civilight2014-front-main-actions li:hover,
+.civilight2014-front-main-actions li:focus {
+  background-image: url('../images/slant-tile.png');
 }
 
 .civilight2014-front-main-actions li a {
   width: 300px;
-  height: 200px;
+  height: 220px;
   line-height: 400px;
   text-align: center;
+  display: block;
 }
+
 
 .civilight2014-front-main-actions li a:hover,
 .civilight2014-front-main-actions li a:focus {
   text-decoration: underline;
 }
 
+.civilight2014-front-main-actions li a {
+  font-family: 'Oswald'; 
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 110%;
+  color: black;
+}
+
 .civilight2014-front-main-actions li.civilight2014-front-main-actions-discover a {
-  background: url('../images/front-main-actions-discover.jpg');
+  background: url(../images/decouvrir-civi-nba.png) no-repeat center bottom;
 }
 
 .civilight2014-front-main-actions li.civilight2014-front-main-actions-help a {
-  background: url('../images/front-main-actions-help.jpg');
+  background: url(../images/1390011880_help.png) no-repeat center 65px;
 }
 
 .civilight2014-front-main-actions li.civilight2014-front-main-actions-community a {
-  background: url('../images/front-main-actions-community.jpg');
+  background: url(../images/1390011551_group.png) no-repeat center 65px;
 }
 
 @media (min-width: 768px) {
