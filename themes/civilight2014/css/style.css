@@ -1,3 +1,20 @@
+/**
+ * Main color codes:
+ *
+ * Blue links: #428bca (from bootstrap)
+ * Main navigation red links: #A55F53 (from civicrm.org)
+ */
+
+/**
+ * Logo, site slogan
+ */
+header#navbar p.lead {
+  position: absolute;
+  top: 95px;
+  left: 110px;
+  font-size: 13px;
+  color: #428bca;
+}
 
 /**
  * Main menu
@@ -32,6 +49,37 @@
 .navbar-default .navbar-nav > li.active > a:focus {
   text-decoration: underline;
 }
+
+/**
+ * Mini top user menu
+ */
+.region-navigation .block-menu {
+  height: 2em; /* because of floats, avoid the div being too big and breaking other links below */
+}
+.region-navigation ul.nav {
+  float: right;
+  padding-top: 5px;
+}
+.region-navigation .nav > li {
+  float: left;
+  border-right: 1px solid #006285;
+}
+
+.region-navigation .nav > li.last {
+  border-right: inherit;
+}
+
+.region-navigation .nav > li > a,
+.region-navigation .nav > li > a:focus {
+  display: inline;
+  background: inherit;
+}
+
+/* Hide 'Login' link to logged in users */
+body.logged-in .region-navigation .nav > li:nth-child(3) {
+  display: none;
+}
+
 
 /**
  * Front page. General stuff.
@@ -78,7 +126,7 @@ body.front .region-content {
 }
 
 .civilight2014-front-main-actions li a {
-  font-family: 'Oswald'; 
+  font-family: 'Oswald';
   font-weight: 300;
   font-size: 27px;
   line-height: 110%;
@@ -154,4 +202,21 @@ body > footer .container {
 .civilight2014-footer-license-icon {
   float: left;
   padding-right: 1em;
+}
+
+/**
+ * Front page blog.
+ */
+#block-views-blogs-block {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 6em;
+}
+
+#block-views-blogs-block .views-row {
+  padding-bottom: 1em;
+}
+
+#block-views-blogs-block .views-row .views-field-title {
+  font-size: 14pt;
 }
