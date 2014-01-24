@@ -134,15 +134,15 @@ body.front .region-content {
 }
 
 .civilight2014-front-main-actions li.civilight2014-front-main-actions-discover a {
-  background: url(../images/decouvrir-civi-nba.png) no-repeat center bottom;
+  background: url(../images/button-civicrm-discover.png) no-repeat center bottom;
 }
 
 .civilight2014-front-main-actions li.civilight2014-front-main-actions-help a {
-  background: url(../images/1390011880_help.png) no-repeat center 65px;
+  background: url(../images/button-civicrm-help.png) no-repeat center 65px;
 }
 
 .civilight2014-front-main-actions li.civilight2014-front-main-actions-community a {
-  background: url(../images/1390011551_group.png) no-repeat center 65px;
+  background: url(../images/button-civicrm-community.png) no-repeat center 65px;
 }
 
 @media (min-width: 768px) {
