@@ -220,3 +220,10 @@ body > footer .container {
 #block-views-blogs-block .views-row .views-field-title {
   font-size: 14pt;
 }
+
+/**
+ * Blog content-type
+ */
+#block-system-main .submitted {
+  padding-bottom: 1em;
+}
