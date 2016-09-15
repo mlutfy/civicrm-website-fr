@@ -1,0 +1,51 @@
+<?php
+
+define('CIVIDOWNLOADLATEST_URL', 'https://latest.civicrm.org/versions.json');
+
+function cividownloadlatest_init() {
+  $lastcheck = variable_get('cividownloadlatest_lastcheck', NULL);
+  $cachetime = variable_get('cividownloadlatest_cachetime', 21600); // 6h
+
+  $release = array();
+  $release['stable'] = variable_get('cividownloadlatest_version_stable');
+  $release['lts'] = variable_get('cividownloadlatest_version_lts');
+
+  if (! $lastcheck || empty($release['stable']) || $lastcheck < time() - $cachetime) {
+    $result = drupal_http_request(CIVIDOWNLOADLATEST_URL);
+
+    if ($result->code == 200) {
+      $versions = json_decode($result->data);
+
+      if (! empty($versions)) {
+        foreach ($versions as $key => $val) {
+          $latest = array_pop($val->releases);
+
+          if (in_array($val->status, array('stable', 'lts')) && $latest->version != $release[$val->status]) {
+            $release[$val->status] = $latest->version;
+            variable_set('cividownloadlatest_version_' . $val->status, $latest->version);
+            watchdog('cividownloadlatest', 'New version of CiviCRM %release: %version', array('%release' => $val->status, '%version' => $latest->version));
+          }
+        }
+      }
+
+      variable_set('cividownloadlatest_lastcheck', time());
+    }
+    else {
+      watchdog('cividownloadlatest', 'There was an error fetch the versions.json');
+    }
+  }
+
+  foreach ($release as $key => $val) {
+    // This isn't used, but if we move out the JS of the lines after, will be useful.
+    drupal_add_js(array('cividownloadlatest' => array($key => $val)), array('type' => 'setting'));
+
+    // Searches for versions tags on the download page. Ex: {{lts}} or {{stable}}.
+    // FIXME: surely there is a better way to do this?
+    drupal_add_js('(function($) {
+      if ($("body.page-node-25").size() > 0 && $("body.page-node-edit").size() <= 0) {
+        var html = $(".content").html().replace(/{{' . $key . '}}/g, "' . $val . '");
+        $(".content").html(html);
+      }
+    })(jQuery)', array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
+  }
+}
