@@ -43,8 +43,8 @@ function cividownloadlatest_init() {
     // FIXME: surely there is a better way to do this?
     drupal_add_js('(function($) {
       if ($("body.page-node-25").size() > 0 && $("body.page-node-edit").size() <= 0) {
-        var html = $(".content").html().replace(/{{' . $key . '}}/g, "' . $val . '");
-        $(".content").html(html);
+        var html = $(".node").html().replace(/{{' . $key . '}}/g, "' . $val . '");
+        $(".node").html(html);
       }
     })(jQuery)', array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
   }
