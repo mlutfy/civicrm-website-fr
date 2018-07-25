@@ -21,8 +21,8 @@ header#navbar .navbar-header {
 }
 header#navbar .navbar-header p.lead {
   position: absolute;
-  top: 95px;
-  left: 110px;
+  top: 60px;
+  left: 55px;
   font-size: 13px;
   color: #428bca;
 }
