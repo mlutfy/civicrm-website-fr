@@ -8,7 +8,18 @@
 /**
  * Logo, site slogan
  */
-header#navbar p.lead {
+header#navbar {
+  background: none;
+  border: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 2px 1px rgba(0,0,0,0.075);
+  width: 100%;
+  border-radius: 0;
+}
+
+header#navbar .navbar-header {
+  position: relative;
+}
+header#navbar .navbar-header p.lead {
   position: absolute;
   top: 95px;
   left: 110px;
@@ -50,6 +61,11 @@ header#navbar p.lead {
   text-decoration: underline;
 }
 
+/* hide the caret, if sub-menu items */
+.navbar-default .navbar-nav .caret {
+  display: none;
+}
+
 /**
  * Mini top user menu
  */
@@ -75,12 +91,6 @@ header#navbar p.lead {
   background: inherit;
 }
 
-/* Hide 'Login' link to logged in users */
-body.logged-in .region-navigation .nav > li:nth-child(3) {
-  display: none;
-}
-
-
 /**
  * Front page. General stuff.
  */
@@ -89,8 +99,10 @@ body.front h1.page-header {
   display: none;
 }
 
-body.front .region-content {
-  padding-top: 2em;
+body.front .jumbotron {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #FAFAFA;
 }
 
 /**
@@ -172,6 +184,7 @@ body.front .region-content {
 body > footer {
   background: #056186;
   color: #fff;
+  padding-bottom: 5em;
 }
 
 body > footer .container {
@@ -182,38 +195,80 @@ body > footer .container {
   padding-bottom: 2em;
 }
 
-.civilight2014-footer-civicrm-civiorg a {
+.civilight2014-footer-civicrm-civiorg .civilight2014-footer-civicrm-civiorg-logo a {
   display: block;
   height: 50px;
   line-height: 50px;
   background: url('../images/bottom-logo.png') no-repeat;
   padding-left: 150px;
 }
-
-.civilight2014-footer-civicrm-civiorg a {
+.civilight2014-footer-civicrm-civiorg .civilight2014-footer-civicrm-civiorg-other {
+  padding-left: 150px;
+}
+.civilight2014-footer-civicrm-civiorg a,
+.civilight2014-footer-license-icon a {
   color: #fff;
 }
-
 .civilight2014-footer-civicrm-civiorg a:hover,
-.civilight2014-footer-civicrm-civiorg a:focus {
+.civilight2014-footer-civicrm-civiorg a:focus,
+.civilight2014-footer-license-icon a:hover,
+.civilight2014-footer-license-icon a:focus {
   text-decoration: underline;
 }
 
-.civilight2014-footer-license-icon {
-  float: left;
-  padding-right: 1em;
+.civilight2014-footer-license-icon a {
+  display: block;
+  background: url('https://i.creativecommons.org/l/by-sa/2.5/ca/88x31.png') no-repeat;
+  padding-left: 150px;
 }
 
 /**
  * Front page blog.
  */
-#block-views-blogs-block {
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 6em;
+#block-views-blogs-block,
+#block-views-rss-forum-block {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-#block-views-blogs-block .views-row {
+@media (min-width: 992px) {
+  #block-views-blogs-block {
+    float: left;
+    width: 600px;
+    padding-left: 100px;
+  }
+
+  #block-views-rss-forum-block {
+    float: right;
+    width: 440px;
+    padding-right: 100px;
+  }
+
+  #block-views-blogs-block,
+  #block-views-rss-forum-block {
+    margin-top: 6em;
+    margin-bottom: 6em;
+  }
+}
+
+#block-views-blogs-block .view-header,
+#block-views-rss-forum-block .view-header {
+  font-size: 20px;
+  text-align: right;
+}
+
+#block-views-blogs-block .view-header a,
+#block-views-rss-forum-block .view-header a {
+  color: #555;
+  text-decoration: none;
+}
+
+#block-views-rss-forum-block .view-footer {
+  margin-top: 0.5em;
+}
+
+#block-views-blogs-block .views-row,
+#block-views-rss-forum-block .views-row {
   padding-bottom: 1em;
 }
 
@@ -224,6 +279,55 @@ body > footer .container {
 /**
  * Blog content-type
  */
+h1.page-header {
+  margin: 20px 0;
+}
 #block-system-main .submitted {
   padding-bottom: 1em;
+}
+
+body.node-type-blog .field-name-field-banner-image img {
+  width: 100%;
+  height: auto;
+}
+
+/**
+ * Discover boxes
+ */
+.civilight2014-discover-box {
+  display: inline-block;
+  vertical-align: top;
+  width: 293px;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 10px;
+  margin: 0.5em;
+  padding: 0.5em;
+  box-shadow: 3px 3px 5px #eee;
+}
+
+.civilight2014-discover-box:hover {
+  box-shadow: 3px 3px 5px #ccf;
+}
+
+.civilight2014-discover-box a {
+  display: block;
+  min-height: 130px;
+}
+
+.civilight2014-discover-box a,
+.civilight2014-discover-box i.fa,
+.civilight2014-discover-box p {
+  color: #000;
+  text-decoration: none;
+}
+
+.civilight2014-discover-box h4 {
+  color: #428BCA;
+}
+
+/**
+ * Download page
+ */
+.crm-download-buttons {
+  padding: 0.5em 1em 0.5em 0;
 }

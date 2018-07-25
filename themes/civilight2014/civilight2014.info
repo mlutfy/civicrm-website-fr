@@ -26,6 +26,7 @@ regions[page_bottom]    = 'Page bottom'
 
 stylesheets[all][] = dist/css/bootstrap.min.css
 stylesheets[all][] = dist/css/bootstrap-theme.min.css
+stylesheets[all][] = dist/font-awesome-4.3.0/css/font-awesome.min.css
 
 stylesheets[all][] = css/style.css
 
@@ -41,7 +42,7 @@ stylesheets[all][] = css/style.css
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = dist/js/bootstrap.min.js
+scripts[] = dist/js/bootstrap.min.js
  
 ; scripts[] = 'bootstrap/js/affix.js'
 ; scripts[] = 'bootstrap/js/alert.js'
