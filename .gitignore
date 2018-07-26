@@ -1,4 +1,17 @@
-files
 private
-drushrc.php
 settings.php
+civicrm.settings.php
+drushrc.php
+files/*
+!files/adminimal-custom.css
+!files/bio-custom.css
+!files/robots.txt
+
+# CiviCRM extension cache
+modules/extensions/cache/
+
+# Make sure that these files do not get accidently committed
+*.tar.gz
+*.zip
+*.mo
+*.swp
