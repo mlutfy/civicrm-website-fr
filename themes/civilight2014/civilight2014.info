@@ -9,7 +9,8 @@ base theme = bootstrap
 ;;;;;;;;;;;;;;;;;;;;;
 
 regions[navigation]     = 'Navigation'
-regions[header]         = 'Top Bar'
+regions[topnav]         = 'Top Navigation'
+regions[header]         = 'Page Header'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
@@ -19,6 +20,15 @@ regions[footer]         = 'Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
+;;;;;;;;;;;;;;;;;;;;;
+;; Fonts (fontyourface)
+;;;;;;;;;;;;;;;;;;;;;
+
+fonts[google_fonts_api][] = "Oswald&subset=latin#700"
+fonts[google_fonts_api][] = "Source Sans Pro&subset=latin-ext#300"
+fonts[google_fonts_api][] = "Source Sans Pro&subset=latin-ext#700"
+fonts[google_fonts_api][] = "Source Sans Pro&subset=latin#italic"
+fonts[google_fonts_api][] = "Source Sans Pro&subset=latin-ext#regular"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets

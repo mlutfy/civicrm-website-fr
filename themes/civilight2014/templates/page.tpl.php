@@ -74,6 +74,18 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+  <?php if (!empty($page['topnav'])): ?>
+  <div id="topbar">
+    <div class="navbar-collapse collapse">
+      <nav role="navigation" id="navigation1">
+        <div class="container">
+          <?php print render($page['topnav']); ?>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <?php endif; ?>
+
   <div class="container">
     <div class="navbar-header">
       <?php if ($logo): ?>
