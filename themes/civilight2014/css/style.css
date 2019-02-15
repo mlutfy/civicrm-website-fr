@@ -370,3 +370,78 @@ body.node-type-blog .field-name-field-banner-image img {
 .galleria-container {
   background: #fff !important;
 }
+
+/**
+ * Spark
+ */
+body.page-node-44 .main-container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  body.page-node-44 .main-container #node-44 .stripe-white,
+  body.page-node-44 .main-container #node-44 .stripe-blue,
+  body.page-node-44 .main-container #node-44 .stripe-extra-white,
+  body.page-node-44 .main-container #node-44 .stripe-green {
+    max-width: 1195px;
+    margin: 0 auto;
+    clear: both;
+  }
+}
+
+body.page-node-44 h1.page-header {
+  display: none;
+}
+
+.spark-banner {
+  background-color: #FFFFFF !important;
+  background-image: url('https://civicrm.org/sites/civicrm.org/files/jakub-skafiriak-567.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  height: 300px;
+  color: #fff;
+}
+
+.spark-banner > div {
+  width: 1195px;
+  margin: 0 auto;
+}
+
+.spark-banner .green-lead {
+  text-transform: uppercase;
+  font-size: 60px;
+  margin: 50px 0 10px 0;
+  font-family: 'Oswald',sans-serif;
+  font-weight: 700;
+}
+
+a.bluebutton {
+  background-color: #0786b5;
+  color: #fff;
+  font-size: 22px;
+  padding: 15px 30px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+.feature-box, a.feature-box {
+  background: #eee none repeat scroll 0 0;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 12px 12px 0;
+  min-height: 320px;
+  padding: 25px;
+  width: calc(25% - 9px);
+  color: #635d5e;
+}
+
+.feature-box:hover > .heading {
+  color: #82c459;
+  text-decoration: none;
+}
+.feature-box .heading {
+  font-weight: bold;
+}
