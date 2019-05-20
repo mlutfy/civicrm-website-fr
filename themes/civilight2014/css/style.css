@@ -258,7 +258,7 @@ body > footer .container {
  * Front page blog.
  */
 #block-views-blogs-block,
-#block-views-rss-forum-block {
+#block-views-rss-blog-co-block {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -270,37 +270,37 @@ body > footer .container {
     padding-left: 100px;
   }
 
-  #block-views-rss-forum-block {
+  #block-views-rss-blog-co-block {
     float: right;
     width: 440px;
     padding-right: 100px;
   }
 
   #block-views-blogs-block,
-  #block-views-rss-forum-block {
+  #block-views-rss-blog-co-block {
     margin-top: 6em;
     margin-bottom: 6em;
   }
 }
 
 #block-views-blogs-block .view-header,
-#block-views-rss-forum-block .view-header {
+#block-views-rss-blog-co-block .view-header {
   font-size: 20px;
   text-align: right;
 }
 
 #block-views-blogs-block .view-header a,
-#block-views-rss-forum-block .view-header a {
+#block-views-rss-blog-co-block .view-header a {
   color: #555;
   text-decoration: none;
 }
 
-#block-views-rss-forum-block .view-footer {
+#block-views-rss-blog-co-block .view-footer {
   margin-top: 0.5em;
 }
 
 #block-views-blogs-block .views-row,
-#block-views-rss-forum-block .views-row {
+#block-views-rss-blog-co-block .views-row {
   padding-bottom: 1em;
 }
 
